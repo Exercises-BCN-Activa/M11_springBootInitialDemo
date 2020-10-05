@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "41a99358-a646-4feb-8867-9e8eee4f417f",
+		"name": "IT Adacademy - M11",
+		"description": "# BCN Activa\n## IT Adacademy\n\n### M11 Exercise - Spring Getting Starter\n- Know the structure of the HTTP protocol\n- Learn to use Postman\n- Understand how to use dependency managers (Gradle / Maven)\n- Use projects with standard spring structure\n- Create HTTP requests of GET type with parameters\n\n### PHASE 1\n- Download Install Postman to your system. Make a GET request at https://restcountries.eu/rest/v2/lang/es. Dump the result to a JSON file and save it to a new project directory.\n- Create a new collection in Postman and save the previous point request in it. Export the collection and save it in a new project directory.\n\n### Phase 2\n- Using the SpringBootInitialDemo project as a reference, create a GET request to \"/\" that returns a \"HELLO WORLD\" in response.\n- Modify the previous request to accept one variable per path, which is a name, by constructing “Hello, <NAME>”\n\n### Phase 3\n- He creates in Postman three environments, \"local\", \"development\" and \"pre-production\". Assigns as local variable \"localhost\", \"dev.domain.com\" and \"pre.domain.com\" respectively.\n- It also assigns the variable \"port\" to the \"local\" environment, setting the output port used by the microservice. Executes phase 2 requests using the IP and port variables created in the URL.\n- Export a new collection with the created environments and save it in the project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Phase1_1.2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restcountries.eu/rest/v2/lang/es",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"eu"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"lang",
+						"es"
+					]
+				},
+				"description": "Download Install Postman to your system. Make a GET request to https://restcountries.eu/rest/v2/lang/es. Dump the result to a JSON file and save it to a new project directory."
+			},
+			"response": []
+		},
+		{
+			"name": "Phase2_2.1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						""
+					]
+				},
+				"description": "Useful with the reference to project SpringBootInitialDemo, create a petition GET towards \"/\" which with the answer returned \"HELLO WORLD\"."
+			},
+			"response": []
+		},
+		{
+			"name": "Phase2_2.2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/Fauno Guazina",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"Fauno Guazina"
+					]
+				},
+				"description": "Modify the previous request because it accepts a variable per path, which follows a nom, construct “Hello, <NOM>”"
+			},
+			"response": []
+		},
+		{
+			"name": "Phase3_3.1a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{IP}}:{{port}}/v1/",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						""
+					]
+				},
+				"description": "Create en Postman three entorns, \"local\", \"development\" and \"preproduction\". Sign with the IP variable \"localhost\", \"dev.domain.com\" i \"pre.domain.com\" respectively. Also assigns the variable \"port\" to the \"local\" input, fixing the port of assortment that uses the microservice. Performs the phase 2 queries using the URL on the variable variables IP i port. Exports a new collection in the surrounding creations and save it in the project."
+			},
+			"response": []
+		},
+		{
+			"name": "Phase3_3.1b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{IP}}:{{port}}/v1/Fauno Guazina",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"Fauno Guazina"
+					]
+				},
+				"description": "Create en Postman three entorns, \"local\", \"development\" and \"preproduction\". Sign with the IP variable \"localhost\", \"dev.domain.com\" i \"pre.domain.com\" respectively. Also assigns the variable \"port\" to the \"local\" input, fixing the port of assortment that uses the microservice. Performs the phase 2 queries using the URL on the variable variables IP i port. Exports a new collection in the surrounding creations and save it in the project."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
